@@ -1,0 +1,52 @@
+{
+  "name": "express-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "build": "del dist -rf /Q && webpack --mode development --config webpack.server.config.js && webpack --mode development",
+    "buildDev": "del dist -rf /Q && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js",
+    "buildProd": "del dist -rf /Q && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js",
+    "start": "node ./dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "eslint": "^7.28.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "imports-loader": "^3.0.0",
+    "jest": "^27.0.4",
+    "jquery": "^3.6.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.0",
+    "serialize-javascript": "^5.0.1",
+    "style-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.1",
+    "val-loader": "^4.0.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-middleware": "^5.0.0",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
